@@ -1,0 +1,49 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    max-width: 200px;
+    &__butttom {
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+  
+  .product-image {
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .product-description {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .product-rating {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .favorite-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .favorite-button.favorite {
+    background-color: #ff5722; /* Цвет для добавленных в избранное товаров */
+    color: #fff;
+    border: none;
+  }
+  

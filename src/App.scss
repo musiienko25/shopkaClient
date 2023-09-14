@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+
+  &_leftSide {
+    width: 30%;
+  }
+  &_rightSide {
+    margin-top: 40px;
+
+    width: 70%;
+  }
+  &_cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
