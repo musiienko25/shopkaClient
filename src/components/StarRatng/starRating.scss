@@ -1,0 +1,12 @@
+.rating {
+    display: inline;
+    margin-right: 10px;
+    & .rating-wrapper {
+    display: inline;
+    margin-right: 10px;
+    }
+    & .star-svg {
+        width: 10px;
+        height: 10px;
+    }
+}

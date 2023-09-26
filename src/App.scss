@@ -13,4 +13,21 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  & .rating-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_rightSide__top {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  &_rightSide__top__right {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 130px;
+  }
 }

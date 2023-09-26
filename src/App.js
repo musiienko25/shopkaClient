@@ -6,7 +6,10 @@ import SelectInput from "./components/SelectInput/SelectInput";
 import SearchInput from "./components/SearchInput/SearchInput";
 import ProductCard from "./components/ProductCard/ProductCard";
 import MultiRangeSlider from "./components/Ranges/MultiRangeSlider";
+import StarRating from "./components/StarRatng/StarRating";
 import image1 from "../src/assets/img/image1.jpg";
+import Avatar from "react-avatar";
+import TransparentButton from "./components/TransparentButton/TransParentButton";
 
 function App() {
   const items = [
@@ -51,12 +54,10 @@ function App() {
 
     let filtered;
     if (inputValue === "1") {
-      // Фильтруем элементы с рейтингом 1
       filtered = items.filter((item) => item.rating === 1);
     } else if (inputValue === "5") {
       filtered = items.filter((item) => item.rating === 5);
     } else {
-      // В противном случае, используем фильтрацию по описанию
       filtered = items.filter((item) =>
         item.description.toLowerCase().includes(inputValue.toLowerCase())
       );
@@ -65,8 +66,9 @@ function App() {
     setFilteredItems(filtered);
   };
 
-  const onChange = (index, values) =>
-    setRanges(ranges.map((n, i) => (i === index ? { ...n, values } : n)));
+  const handleClick = () => {
+    alert("Кнопка была нажата!");
+  };
 
   return (
     <div className="App">
@@ -76,16 +78,25 @@ function App() {
           max={1000}
           onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
         />
+        <div className="rating-wrapper">
+          <StarRating readonly={true} initialValue={5} />
+          <StarRating readonly={true} initialValue={4} />
+          <StarRating readonly={true} initialValue={3} />
+        </div>
       </div>
       <div className="App_rightSide">
         {" "}
         <div>
-          <div>
+          <div className="App_rightSide__top">
             <SearchInput
               searchValue={searchValue}
               handleInputChange={handleInputChange}
               clearSearch={clearSearch}
             />
+            <div className="App_rightSide__top__right">
+              <TransparentButton text="Watch" onClick={handleClick} />
+              <Avatar name="Oleksii Mus" size={30} round="20px" />
+            </div>
           </div>
           <div>
             <SelectInput

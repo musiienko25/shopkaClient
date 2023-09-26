@@ -1,0 +1,16 @@
+.transparentButton {
+    background-color: transparent;
+    border: 1px solid #007bff; 
+    color: #007bff; 
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  
+  }
+  
+  .transparentButton:hover {
+    background-color: #007bff; 
+    color: #fff;
+  }
+  
