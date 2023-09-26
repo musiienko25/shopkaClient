@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 
 const CustomSelect = ({
+  handleChange,
+  selectedValue,
   label = true,
   options = [
     { value: "option one", label: "Option One" },
     { value: "option two", label: "Option Two" },
   ],
 }) => {
-  const [selectedValue, setSelectedValue] = useState("");
-
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
-
   return (
     <div
       style={{
